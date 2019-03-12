@@ -6,4 +6,8 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_wellcome_chasis">WellcomeChasisActivity</string>
     <string name="title_activity_read_chasis_or_patent">ReadChasisOrPatentActivity</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_userName_value">Martin Gerona</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

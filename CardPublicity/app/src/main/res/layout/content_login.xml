@@ -11,8 +11,8 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="485dp"
-        app:srcCompat="@mipmap/fiat_background" />
+        android:layout_height="400dp"
+        app:srcCompat="@mipmap/fiat_500" />
 
     <CheckBox
         android:layout_gravity="center"
