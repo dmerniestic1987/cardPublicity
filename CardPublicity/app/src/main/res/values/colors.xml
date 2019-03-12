@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#263238</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryLight">#4f5b62</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="facebook_blue">#3a589b</color>
+    <color name="red_google">#dc4335</color>
+    <color name="white">#f1f2f2</color>
+
+    <color name="checkbox_checked">#a3a3a3</color>
+    <color name="checkbox_unchckede">#b7b7b7</color>
+    <color name="green_check">#66bb6a</color>
+</resources>
