@@ -2,18 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:id="@+id/bottom_navigation_mis_autos"
+        android:icon="@drawable/ic_car_of_hatchback_model"
+        android:title="Mis autos" />
+    <item
+        android:id="@+id/bottom_navigation_comprar"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="Comprar auto" />
+    <item
+        android:id="@+id/bottom_navigation_beneficios"
+        android:icon="@drawable/ic_smiling_emoticon_square_face"
+        android:title="Beneficios" />
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
-
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
+        android:id="@+id/bottom_navigation_concesionarias"
+        android:icon="@drawable/ic_add_location_black_24dp"
+        android:title="Concesionarias" />
 
 </menu>

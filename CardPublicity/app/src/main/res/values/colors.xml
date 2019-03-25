@@ -12,4 +12,13 @@
     <color name="checkbox_checked">#a3a3a3</color>
     <color name="checkbox_unchckede">#b7b7b7</color>
     <color name="green_check">#66bb6a</color>
+    <color name="activity_background">#EEEEEE</color>
+
+    <color name="google_blue">#4285F4</color>
+    <color name="google_green">#34A853</color>
+    <color name="google_yellow">#FBBC05</color>
+    <color name="google_red">#EA4335</color>
+
+    <color name="itemTextColor">#b7b7b7</color>
+    <color name="itemTitleTextColor">@color/white</color>
 </resources>

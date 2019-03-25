@@ -5,13 +5,27 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/navigation_mis_autos"
             android:icon="@drawable/ic_car_of_hatchback_model"
-            android:title="Titulo 1" />
+            android:title="Mis autos" />
         <item
-            android:id="@+id/nav_my_cars"
-            android:icon="@drawable/ic_check_black_24dp"
-            android:title="Título 2" />
+            android:id="@+id/navigation_comprar"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="Comprar auto" />
+        <item
+            android:id="@+id/navigation_beneficios"
+            android:icon="@drawable/ic_smiling_emoticon_square_face"
+            android:title="Beneficios" />
+
+        <item
+            android:id="@+id/navigation_concesionarias"
+            android:icon="@drawable/ic_add_location_black_24dp"
+            android:title="Buscar concesionarias" />
+
+        <item
+            android:id="@+id/navigation_help"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="Ayuda" />
     </group>
 
 </menu>

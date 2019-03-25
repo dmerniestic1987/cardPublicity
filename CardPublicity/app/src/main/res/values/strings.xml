@@ -1,13 +1,17 @@
 <resources>
-    <string name="app_name">CardPublicity</string>
+    <string name="app_name">Mi Auto</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_wellcome_chasis">WellcomeChasisActivity</string>
     <string name="title_activity_read_chasis_or_patent">ReadChasisOrPatentActivity</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_desc">Conductor estrella</string>
     <string name="nav_userName_value">Martin Gerona</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_info_my_car">InfoMyCarActivity</string>
 </resources>
