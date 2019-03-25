@@ -125,11 +125,11 @@ public class MyCardTabFragment extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return MyCarManualesFragment.newInstance("", "");
+                    return MyCarManualesFragment.newInstance(myCar);
                 case 1:
-                    return MyCarManualesFragment.newInstance("", "");
+                    return MyCarManualesFragment.newInstance(myCar);
                 case 2:
-                    return MyCarManualesFragment.newInstance("", "");
+                    return MyCarManualesFragment.newInstance(myCar);
             }
             return null;
         }

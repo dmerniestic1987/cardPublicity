@@ -10,6 +10,40 @@ public class Car implements Serializable {
     private String vin;
     private String patent;
 
+    private String urlOfficialPage;
+    private String urlManuals;
+    private String urlTechnicalDetail;
+
+    public Car(){
+        super();
+        urlOfficialPage = "https://www.fiat.com.ar/content/fiat-toro";
+        urlManuals = "http://www.fiatmopar.com.ar/Manuales/pdf/60355967-Toro-ESP-al-31-08.pdf";
+        urlTechnicalDetail = "https://www.fiat.com.ar/sites/default/files/pdf/ft_toro_0.pdf";
+    }
+    public String getUrlOfficialPage() {
+        return urlOfficialPage;
+    }
+
+    public void setUrlOfficialPage(String urlOfficialPage) {
+        this.urlOfficialPage = urlOfficialPage;
+    }
+
+    public String getUrlManuals() {
+        return urlManuals;
+    }
+
+    public void setUrlManuals(String urlManuals) {
+        this.urlManuals = urlManuals;
+    }
+
+    public String getUrlTechnicalDetail() {
+        return urlTechnicalDetail;
+    }
+
+    public void setUrlTechnicalDetail(String urlTechnicalDetail) {
+        this.urlTechnicalDetail = urlTechnicalDetail;
+    }
+
     public String getBrand() {
         return brand;
     }

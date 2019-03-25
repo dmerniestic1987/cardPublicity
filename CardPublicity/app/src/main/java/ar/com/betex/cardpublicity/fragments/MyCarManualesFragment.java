@@ -1,42 +1,31 @@
 package ar.com.betex.cardpublicity.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.button.MaterialButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import ar.com.betex.cardpublicity.R;
+import ar.com.betex.cardpublicity.beans.Car;
 
-public class MyCarManualesFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+public class MyCarManualesFragment extends Fragment implements View.OnClickListener {
+    private MaterialButton officialPageButton;
+    private MaterialButton manualButton;
+    private MaterialButton techicalDetailButton;
+    private static final String ARG_My_CAR_SELECTED = "param1";
+    private Car myCar;
 
     public MyCarManualesFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MyCarManualesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MyCarManualesFragment newInstance(String param1, String param2) {
+    public static MyCarManualesFragment newInstance(Car myCar) {
         MyCarManualesFragment fragment = new MyCarManualesFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putSerializable(ARG_My_CAR_SELECTED, myCar);
         fragment.setArguments(args);
         return fragment;
     }
@@ -45,16 +34,44 @@ public class MyCarManualesFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            myCar = (Car) getArguments().getSerializable(ARG_My_CAR_SELECTED);
         }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_card_manuales, container, false);
+        View v = inflater.inflate(R.layout.fragment_my_card_manuales, container, false);
+
+        officialPageButton = v.findViewById(R.id.officialPageButton);
+        officialPageButton.setOnClickListener(this);
+        manualButton = v.findViewById(R.id.manualButton);
+        manualButton.setOnClickListener(this);
+        techicalDetailButton = v.findViewById(R.id.techicalDetailButton);
+        techicalDetailButton.setOnClickListener(this);
+
+        return v;
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.officialPageButton:
+                openInBrowser(myCar.getUrlOfficialPage());
+                break;
+            case R.id.manualButton:
+                openInBrowser(myCar.getUrlManuals());
+                break;
+            case R.id.techicalDetailButton:
+                openInBrowser(myCar.getUrlTechnicalDetail());
+                break;
+        }
+    }
+
+    private void openInBrowser(String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
 }
