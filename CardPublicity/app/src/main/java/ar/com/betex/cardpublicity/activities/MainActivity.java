@@ -1,4 +1,4 @@
-package ar.com.betex.cardpublicity;
+package ar.com.betex.cardpublicity.activities;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,7 +13,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
+
+import ar.com.betex.cardpublicity.fragments.MainFragment;
+import ar.com.betex.cardpublicity.R;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnMainFragmentInteractionListener {
 

@@ -1,4 +1,4 @@
-package ar.com.betex.cardpublicity;
+package ar.com.betex.cardpublicity.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -17,8 +17,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import ar.com.betex.cardpublicity.adapter.RecyclerViewAdapter;
-import ar.com.betex.cardpublicity.bean.Car;
+import ar.com.betex.cardpublicity.R;
+import ar.com.betex.cardpublicity.adapters.RecyclerViewAdapter;
+import ar.com.betex.cardpublicity.beans.Car;
 
 
 /**

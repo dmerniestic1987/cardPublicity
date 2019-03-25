@@ -1,4 +1,4 @@
-package ar.com.betex.cardpublicity.adapter;
+package ar.com.betex.cardpublicity.adapters;
 
 
 import android.app.Activity;
@@ -16,10 +16,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import ar.com.betex.cardpublicity.InfoMyCarActivity;
+import ar.com.betex.cardpublicity.activities.InfoMyCarActivity;
 import ar.com.betex.cardpublicity.R;
-import ar.com.betex.cardpublicity.bean.Car;
-import ar.com.betex.cardpublicity.listener.onMoveAndSwipedListener;
+import ar.com.betex.cardpublicity.beans.Car;
+import ar.com.betex.cardpublicity.listeners.onMoveAndSwipedListener;
 
 import java.util.ArrayList;
 import java.util.Collections;

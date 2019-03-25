@@ -12,19 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".InfoMyCarActivity"
+            android:name=".activities.InfoMyCarActivity"
             android:label="@string/title_activity_info_my_car"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".ReadChasisOrPatentActivity"
+            android:name=".activities.ReadChasisOrPatentActivity"
             android:label="@string/title_activity_read_chasis_or_patent"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".WellcomeChasisActivity"
+            android:name=".activities.WellcomeChasisActivity"
             android:label="@string/title_activity_wellcome_chasis"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name" />
     </application>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WellcomeChasisActivity"
+    tools:context=".activities.WellcomeChasisActivity"
     android:orientation="vertical"
     tools:showIn="@layout/activity_wellcome_chasis"
     android:background="@color/colorPrimaryDark">

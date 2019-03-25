@@ -1,4 +1,4 @@
-package ar.com.betex.cardpublicity.bean;
+package ar.com.betex.cardpublicity.beans;
 
 public class Car {
     private String brand;

@@ -1,4 +1,4 @@
-package ar.com.betex.cardpublicity;
+package ar.com.betex.cardpublicity.activities;
 
 import android.Manifest;
 import android.content.Context;
@@ -10,7 +10,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import ar.com.betex.cardpublicity.R;
 
 public class WellcomeChasisActivity extends AppCompatActivity {
     private Button escanearChasisButtton;
