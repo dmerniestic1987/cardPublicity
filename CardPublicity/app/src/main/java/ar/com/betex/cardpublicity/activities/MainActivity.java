@@ -1,9 +1,11 @@
 package ar.com.betex.cardpublicity.activities;
 
-import android.net.Uri;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -13,15 +15,18 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
-import ar.com.betex.cardpublicity.fragments.MainFragment;
+import ar.com.betex.cardpublicity.beans.Car;
+import ar.com.betex.cardpublicity.fragments.MyCarsFragment;
 import ar.com.betex.cardpublicity.R;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.OnMainFragmentInteractionListener {
-
+public class MainActivity extends AppCompatActivity implements MyCarsFragment.OnMyCarsFragmentInteractionListener {
+    private Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = this;
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -41,8 +46,16 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnMa
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottonNavigation);
         navigation.setOnNavigationItemSelectedListener(this.onButtonNavigationViewItemSelectedListener);
 
-        this.replaceFragment(MainFragment.newInstance("", ""), MainFragment.TAG);
-        //contentFrameLayout
+        this.replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
+
+        FloatingActionButton fab = findViewById(R.id.fab_add_main_activity);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, WellcomeChasisActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     protected void replaceFragment(Fragment fragment, String tag){
         FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
@@ -90,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnMa
     };
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
-
+    public void onMyCarCardSelected(Car car) {
+        this.replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
     }
 }

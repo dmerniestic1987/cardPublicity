@@ -3,7 +3,9 @@
     <color name="colorPrimary">#263238</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorPrimaryLight">#4f5b62</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#E64A19</color>
+
+
     <color name="black">#000000</color>
     <color name="facebook_blue">#3a589b</color>
     <color name="red_google">#dc4335</color>

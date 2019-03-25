@@ -1,10 +1,7 @@
 package ar.com.betex.cardpublicity.adapters;
 
 
-import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Context;
-import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,26 +12,26 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import ar.com.betex.cardpublicity.activities.InfoMyCarActivity;
 import ar.com.betex.cardpublicity.R;
 import ar.com.betex.cardpublicity.beans.Car;
+import ar.com.betex.cardpublicity.fragments.MyCarsFragment;
 import ar.com.betex.cardpublicity.listeners.onMoveAndSwipedListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements onMoveAndSwipedListener {
+public class MyCarRecybleViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements onMoveAndSwipedListener {
 
     private Context context;
     private List<Car> mItems;
     private int color = 0;
+    private MyCarsFragment.OnMyCarsFragmentInteractionListener listener;
 
-
-    public RecyclerViewAdapter(Context context) {
+    public MyCarRecybleViewAdapter(Context context, MyCarsFragment.OnMyCarsFragmentInteractionListener listener) {
         this.context = context;
         mItems = new ArrayList();
+        this.listener = listener;
     }
 
     public void setItems(List<Car> data) {
@@ -57,7 +54,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
-        Car car = this.mItems.get(position);
+        final Car car = this.mItems.get(position);
 
         if (holder instanceof ItemCarViewHolder) {
 
@@ -85,10 +82,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             recyclerViewHolder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(context, InfoMyCarActivity.class);
-                    intent.putExtra("color", color);
-                    context.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation
-                            ((Activity) context, recyclerViewHolder.rela_round, "shareView").toBundle());
+                    listener.onMyCarCardSelected(car);
                 }
             });
         }

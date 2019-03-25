@@ -21,7 +21,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bienvenido Martín Gerona"
+        android:text="@string/title_add_car_to_may_cars"
         android:layout_margin="15dp"
         android:layout_gravity="center"
         android:textSize="25sp"

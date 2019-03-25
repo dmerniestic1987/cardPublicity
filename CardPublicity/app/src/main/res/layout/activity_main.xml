@@ -39,5 +39,4 @@
             app:menu="@menu/navigation"
             app:labelVisibilityMode="labeled" />
     </RelativeLayout>
-
 </android.support.v4.widget.DrawerLayout>

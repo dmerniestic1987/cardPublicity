@@ -1,7 +1,6 @@
 package ar.com.betex.cardpublicity.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,44 +17,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ar.com.betex.cardpublicity.R;
-import ar.com.betex.cardpublicity.adapters.RecyclerViewAdapter;
+import ar.com.betex.cardpublicity.adapters.MyCarRecybleViewAdapter;
 import ar.com.betex.cardpublicity.beans.Car;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link OnMainFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link MainFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class MainFragment extends Fragment {
-    public static final String TAG = "MainFragment";
-    private OnMainFragmentInteractionListener mListener;
+public class MyCarsFragment extends Fragment {
+    public static final String TAG = "MyCarsFragment";
+    private OnMyCarsFragmentInteractionListener mListener;
     private RecyclerView mRecyclerView;
-    private RecyclerViewAdapter adapter;
+    private MyCarRecybleViewAdapter adapter;
     private List<Car> data;
     private String insertData;
     private boolean loading;
     private int loadTimes;
 
 
-    public MainFragment() {
+    public MyCarsFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MainFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MainFragment newInstance(String param1, String param2) {
-        MainFragment fragment = new MainFragment();
+    public static MyCarsFragment newInstance() {
+        MyCarsFragment fragment = new MyCarsFragment();
         return fragment;
     }
 
@@ -70,18 +52,12 @@ public class MainFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_main, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initData();
         initView();
+
     }
 
     private void initData() {
@@ -147,11 +123,11 @@ public class MainFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnMainFragmentInteractionListener) {
-            mListener = (OnMainFragmentInteractionListener) context;
+        if (context instanceof OnMyCarsFragmentInteractionListener) {
+            mListener = (OnMyCarsFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement OnMainFragmentInteractionListener");
+                    + " must implement OnMyCarsFragmentInteractionListener");
         }
     }
 
@@ -161,19 +137,12 @@ public class MainFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnMainFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+    public interface OnMyCarsFragmentInteractionListener {
+        /**
+         * Selecciona un item de My Auto de la lista
+         * @param car
+         */
+        void onMyCarCardSelected(Car car);
     }
 
 
@@ -191,7 +160,7 @@ public class MainFragment extends Fragment {
             mRecyclerView.setLayoutManager(linearLayoutManager);
         }
 
-        adapter = new RecyclerViewAdapter(getContext());
+        adapter = new MyCarRecybleViewAdapter(getContext(), mListener);
         mRecyclerView.setAdapter(adapter);
         adapter.setItems(data);
     }
