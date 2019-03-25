@@ -1,6 +1,8 @@
 package ar.com.betex.cardpublicity.beans;
 
-public class Car {
+import java.io.Serializable;
+
+public class Car implements Serializable {
     private String brand;
     private String model;
     private Integer year;

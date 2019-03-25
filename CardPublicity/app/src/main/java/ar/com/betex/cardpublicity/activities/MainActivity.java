@@ -2,6 +2,7 @@ package ar.com.betex.cardpublicity.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -18,10 +19,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 import ar.com.betex.cardpublicity.beans.Car;
+import ar.com.betex.cardpublicity.fragments.MyCardTabFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarsFragment;
 import ar.com.betex.cardpublicity.R;
 
-public class MainActivity extends AppCompatActivity implements MyCarsFragment.OnMyCarsFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements MyCarsFragment.OnMyCarsFragmentInteractionListener, MyCardTabFragment.OnFragmentInteractionListener
+{
     private Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +107,11 @@ public class MainActivity extends AppCompatActivity implements MyCarsFragment.On
 
     @Override
     public void onMyCarCardSelected(Car car) {
-        this.replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
+        this.replaceFragment(MyCardTabFragment.newInstance(car), MyCardTabFragment.TAG);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
