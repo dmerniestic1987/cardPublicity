@@ -19,4 +19,8 @@
     <string name="title_my_car_tab_info">Información</string>
     <string name="title_my_car_tab_manuals">Manuales</string>
     <string name="title_my_car_tab_accesories">Accesorios</string>
+
+    <string name="my_card_official_page_button_title">Página oficial</string>
+    <string name="my_card_technical_details_button_title">Ficha técnica</string>
+    <string name="my_card_manual_button_title">Manual oficial</string>
 </resources>

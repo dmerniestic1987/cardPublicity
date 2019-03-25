@@ -21,4 +21,6 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="text_margin_small">8dp</dimen>
     <dimen name="text_margin_very_small">4dp</dimen>
+
+    <dimen name="my_car_manual_buttons">200dp</dimen>
 </resources>
