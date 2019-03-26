@@ -19,11 +19,11 @@ import android.view.MenuItem;
 import android.view.View;
 
 import ar.com.betex.cardpublicity.beans.Car;
-import ar.com.betex.cardpublicity.fragments.MyCardTabFragment;
+import ar.com.betex.cardpublicity.fragments.MyCarTabFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarsFragment;
 import ar.com.betex.cardpublicity.R;
 
-public class MainActivity extends AppCompatActivity implements MyCarsFragment.OnMyCarsFragmentInteractionListener, MyCardTabFragment.OnFragmentInteractionListener
+public class MainActivity extends AppCompatActivity implements MyCarsFragment.OnMyCarsFragmentInteractionListener, MyCarTabFragment.OnFragmentInteractionListener
 {
     private Context context;
     @Override
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements MyCarsFragment.On
 
     @Override
     public void onMyCarCardSelected(Car car) {
-        this.replaceFragment(MyCardTabFragment.newInstance(car), MyCardTabFragment.TAG);
+        this.replaceFragment(MyCarTabFragment.newInstance(car), MyCarTabFragment.TAG);
     }
 
     @Override

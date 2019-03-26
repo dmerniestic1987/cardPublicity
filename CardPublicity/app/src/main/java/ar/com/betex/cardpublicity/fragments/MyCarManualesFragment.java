@@ -42,7 +42,7 @@ public class MyCarManualesFragment extends Fragment implements View.OnClickListe
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_my_card_manuales, container, false);
+        View v = inflater.inflate(R.layout.fragment_my_car_manuales, container, false);
 
         officialPageButton = v.findViewById(R.id.officialPageButton);
         officialPageButton.setOnClickListener(this);

@@ -18,26 +18,26 @@ import ar.com.betex.cardpublicity.beans.Car;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link MyCardTabFragment.OnFragmentInteractionListener} interface
+ * {@link MyCarTabFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link MyCardTabFragment#newInstance} factory method to
+ * Use the {@link MyCarTabFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyCardTabFragment extends Fragment {
+public class MyCarTabFragment extends Fragment {
     private static final String ARG_My_CAR_SELECTED = "param1";
     private Car myCar;
     private OnFragmentInteractionListener mListener;
-    public static final String TAG = "MyCardTabFragment";
+    public static final String TAG = "MyCarTabFragment";
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
     public static int int_items = 3;
 
-    public MyCardTabFragment() {
+    public MyCarTabFragment() {
         // Required empty public constructor
     }
 
-    public static MyCardTabFragment newInstance(Car myCar) {
-        MyCardTabFragment fragment = new MyCardTabFragment();
+    public static MyCarTabFragment newInstance(Car myCar) {
+        MyCarTabFragment fragment = new MyCarTabFragment();
         Bundle args = new Bundle();
         args.putSerializable(ARG_My_CAR_SELECTED, myCar);
         fragment.setArguments(args);
@@ -56,7 +56,7 @@ public class MyCardTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_my_card_tab, container, false);
+        View view = inflater.inflate(R.layout.fragment_my_car_tab, container, false);
         tabLayout = (TabLayout) view.findViewById(R.id.tabs);
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         /**
@@ -125,7 +125,7 @@ public class MyCardTabFragment extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return MyCarManualesFragment.newInstance(myCar);
+                    return MyCarInfoFragment.newInstance("","");
                 case 1:
                     return MyCarManualesFragment.newInstance(myCar);
                 case 2:

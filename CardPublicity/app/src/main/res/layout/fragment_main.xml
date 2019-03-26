@@ -13,6 +13,6 @@
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/zero_horizontal_margin_big_activity"
         android:paddingEnd="@dimen/zero_horizontal_margin_big_activity"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         />
 </LinearLayout>
