@@ -17,6 +17,9 @@
     <dimen name="card_recycler_corner_radius">4dp</dimen>
     <dimen name="card_recycler_elevation">2dp</dimen>
 
+    <dimen name="card_gridView_padding">8dp</dimen>
+    <dimen name="card_gridview_horizontal_margin">15dp</dimen>
+    <dimen name="card_gridview_vertical_margin">15dp</dimen>
 
     <dimen name="text_margin">16dp</dimen>
     <dimen name="text_margin_small">8dp</dimen>

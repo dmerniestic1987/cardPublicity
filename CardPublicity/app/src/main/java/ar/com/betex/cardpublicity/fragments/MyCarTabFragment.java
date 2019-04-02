@@ -62,7 +62,7 @@ public class MyCarTabFragment extends Fragment {
         /**
          *Set an Apater for the View Pager
          */
-        viewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
+        viewPager.setAdapter(new MyCarTabFragmentAdapter(getChildFragmentManager()));
 
         /**
          * Now , this is a workaround ,
@@ -87,7 +87,7 @@ public class MyCarTabFragment extends Fragment {
             mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+                    + " must implement OnMyCarAccesoriesListener");
         }
     }
 
@@ -111,9 +111,9 @@ public class MyCarTabFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    class MyAdapter extends FragmentPagerAdapter {
+    class MyCarTabFragmentAdapter extends FragmentPagerAdapter {
 
-        public MyAdapter(FragmentManager fm) {
+        public MyCarTabFragmentAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -129,7 +129,7 @@ public class MyCarTabFragment extends Fragment {
                 case 1:
                     return MyCarManualesFragment.newInstance(myCar);
                 case 2:
-                    return MyCarManualesFragment.newInstance(myCar);
+                    return MyCarsAccesoriesFragment.newInstance();
             }
             return null;
         }
