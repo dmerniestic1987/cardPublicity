@@ -23,4 +23,7 @@
     <string name="my_card_official_page_button_title">Página oficial</string>
     <string name="my_card_technical_details_button_title">Ficha técnica</string>
     <string name="my_card_manual_button_title">Manual oficial</string>
+
+    <string name="title_find_concesionaria">Buscar cercana</string>
+    <string name="title_find_concesionaria_tab_1">Tab 1</string>
 </resources>

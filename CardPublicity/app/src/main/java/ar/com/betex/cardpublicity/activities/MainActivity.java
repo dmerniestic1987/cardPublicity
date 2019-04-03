@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import ar.com.betex.cardpublicity.beans.Car;
+import ar.com.betex.cardpublicity.fragments.CarDealerTabFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarTabFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarsAccesoriesFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarsFragment;
@@ -27,6 +28,7 @@ import ar.com.betex.cardpublicity.R;
 public class MainActivity extends AppCompatActivity implements MyCarsFragment.OnMyCarsFragmentInteractionListener, MyCarTabFragment.OnFragmentInteractionListener, MyCarsAccesoriesFragment.OnMyCarAccesoriesListener
 {
     private Context context;
+    private FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements MyCarsFragment.On
 
         this.replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
 
-        FloatingActionButton fab = findViewById(R.id.fab_add_main_activity);
+        fab = findViewById(R.id.fab_add_main_activity);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,11 +78,17 @@ public class MainActivity extends AppCompatActivity implements MyCarsFragment.On
 
             switch (item.getItemId()) {
                 case R.id.bottom_navigation_mis_autos:
+                    replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
+                    fab.show();
                     return true;
                 case R.id.bottom_navigation_concesionarias:
+                    replaceFragment(CarDealerTabFragment.newInstance(), CarDealerTabFragment.TAG);
+                    fab.hide();
                     return true;
+
                 case R.id.bottom_navigation_comprar:
                     return true;
+
                 case R.id.bottom_navigation_beneficios:
                     return true;
             }
@@ -96,9 +104,12 @@ public class MainActivity extends AppCompatActivity implements MyCarsFragment.On
             int id = item.getItemId();
 
             if (id == R.id.navigation_mis_autos) {
+                replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
 
             } else if (id == R.id.navigation_comprar) {
 
+            } else if (id ==R.id.navigation_concesionarias){
+                replaceFragment(CarDealerTabFragment.newInstance(), CarDealerTabFragment.TAG);
             }
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);

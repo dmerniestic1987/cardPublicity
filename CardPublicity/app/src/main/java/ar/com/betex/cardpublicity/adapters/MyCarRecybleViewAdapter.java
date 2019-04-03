@@ -61,8 +61,8 @@ public class MyCarRecybleViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             final ItemCarViewHolder recyclerViewHolder = (ItemCarViewHolder) holder;
 
             recyclerViewHolder.rela_round.setBackground(ContextCompat.getDrawable(context, car.getDrawableId()));
-            recyclerViewHolder.myCarItemChasis.setText(car.getVin());
-            recyclerViewHolder.myCarItemPatente.setText(car.getPatent());
+            recyclerViewHolder.myCarItemChasis.setText("Chasis " + car.getVin());
+            recyclerViewHolder.myCarItemPatente.setText("Patente " +car.getPatent());
             String title = car.getBrand() + " " + car.getModel() + " " + car.getYear();
 
             recyclerViewHolder.myCarItemTitle.setText(title);
