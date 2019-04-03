@@ -91,7 +91,7 @@ public class CarDealerTabFragment extends Fragment {
 
             switch (position) {
                 case 0:
-                    return getString(R.string.title_find_concesionaria_tab_1);
+                    return getString(R.string.title_find_concesionaria_buy);
                 case 1:
                     return getString(R.string.title_find_concesionaria);
             }
