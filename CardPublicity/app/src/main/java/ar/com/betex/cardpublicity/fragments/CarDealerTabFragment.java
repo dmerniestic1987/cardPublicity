@@ -75,7 +75,7 @@ public class CarDealerTabFragment extends Fragment {
                 case 0:
                     return MyCarInfoFragment.newInstance("","");
                 case 1:
-                    return NearCarDealers.newInstance();
+                    return CarDealerNearFragment.newInstance();
             }
             return null;
         }
