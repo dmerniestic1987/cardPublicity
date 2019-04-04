@@ -39,7 +39,7 @@
         android:textColor="@color/white"/>
 
 
-    <Button
+    <!--<Button
         android:id="@+id/escanearChasisButtton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,9 +51,26 @@
         android:textColor="@color/white"
         android:layout_margin="15dp"
         android:drawableTint="@color/white"
-        android:paddingLeft="40dp"/>
+        android:paddingLeft="40dp"/> -->
 
-    <Button
+    <android.support.design.button.MaterialButton
+        android:id="@+id/escanearChasisButtton"
+        android:layout_width="@dimen/my_car_manual_buttons"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:text="Escanear chasis"
+        android:textAppearance="?android:attr/textAppearanceButton"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_camera_enhance_black_24dp"
+        app:rippleColor="@color/colorPrimaryLight"
+        android:layout_gravity="center"/>
+
+    <!-- <Button
         android:id="@+id/digitarChasisButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,9 +82,26 @@
         android:textColor="@color/white"
         android:layout_margin="15dp"
         android:drawableTint="@color/white"
-        android:paddingLeft="40dp"/>
+        android:paddingLeft="40dp"/> -->
 
-    <Button
+    <android.support.design.button.MaterialButton
+        android:id="@+id/digitarChasisButton"
+        android:layout_width="@dimen/my_car_manual_buttons"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:text="Digitar chasis"
+        android:textAppearance="?android:attr/textAppearanceButton"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_car_of_hatchback_model"
+        app:rippleColor="@color/colorPrimaryLight"
+        android:layout_gravity="center"/>
+
+    <!-- <Button
         android:id="@+id/ingresarPatente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,6 +115,22 @@
         android:layout_marginRight="20dp"
         android:drawableTint="@color/white"
         android:layout_margin="15dp"
-        android:paddingLeft="40dp"/>
+        android:paddingLeft="40dp"/> -->
 
+    <android.support.design.button.MaterialButton
+        android:id="@+id/ingresarPatente"
+        android:layout_width="@dimen/my_car_manual_buttons"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:text="Digitar patente"
+        android:textAppearance="?android:attr/textAppearanceButton"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_directions_car_black_24dp"
+        app:rippleColor="@color/colorPrimaryLight"
+        android:layout_gravity="center"/>
 </LinearLayout>

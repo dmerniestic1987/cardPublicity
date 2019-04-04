@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import ar.com.betex.cardpublicity.beans.Car;
+import ar.com.betex.cardpublicity.fragments.BenefictFragment;
 import ar.com.betex.cardpublicity.fragments.BuyCarFilter;
 import ar.com.betex.cardpublicity.fragments.CarDealerTabFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarTabFragment;
@@ -88,7 +89,8 @@ public class MainActivity extends AppCompatActivity implements MyCarsFragment.On
                     return true;
 
                 case R.id.bottom_navigation_beneficios:
-                    replaceFragment(BuyCarFilter.newInstance("", ""), BuyCarFilter.TAG);
+                    replaceFragment(BenefictFragment.newInstance(), BenefictFragment.TAG);
+                    fab.hide();
                     return true;
             }
             return false;

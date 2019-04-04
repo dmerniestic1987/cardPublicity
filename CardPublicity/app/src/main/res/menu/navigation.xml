@@ -15,4 +15,9 @@
         android:icon="@drawable/ic_add_location_black_24dp"
         android:title="Concesionarias" />
 
+    <item
+        android:id="@+id/bottom_navigation_fabrica"
+        android:icon="@drawable/ic_directions_car_black_24dp"
+        android:title="Fábrica" />
+
 </menu>
