@@ -21,6 +21,7 @@ import android.view.View;
 import ar.com.betex.cardpublicity.beans.Car;
 import ar.com.betex.cardpublicity.fragments.BenefictFragment;
 import ar.com.betex.cardpublicity.fragments.BuyCarFilter;
+import ar.com.betex.cardpublicity.fragments.BuyCarFragment;
 import ar.com.betex.cardpublicity.fragments.CarDealerTabFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarTabFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarsAccesoriesFragment;
@@ -108,9 +109,11 @@ public class MainActivity extends AppCompatActivity implements MyCarsFragment.On
                 replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
 
             } else if (id == R.id.navigation_comprar) {
-
+                replaceFragment(BuyCarFragment.newInstance(), BuyCarFragment.TAG);
             } else if (id ==R.id.navigation_concesionarias){
                 replaceFragment(CarDealerTabFragment.newInstance(), CarDealerTabFragment.TAG);
+            } else if (id == R.id.navigation_beneficios) {
+                replaceFragment(BenefictFragment.newInstance(), BenefictFragment.TAG);
             }
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);

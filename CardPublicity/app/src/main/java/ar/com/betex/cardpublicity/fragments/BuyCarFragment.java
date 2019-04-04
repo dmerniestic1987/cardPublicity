@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import ar.com.betex.cardpublicity.R;
 
 public class BuyCarFragment extends Fragment {
-
+    public static final String TAG = "BuyCarFragment";
     public BuyCarFragment() {
         // Required empty public constructor
     }
