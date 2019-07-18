@@ -11,9 +11,9 @@
         android:title="Beneficios" />
 
     <item
-        android:id="@+id/bottom_navigation_concesionarias"
-        android:icon="@drawable/ic_add_location_black_24dp"
-        android:title="Concesionarias" />
+        android:id="@+id/bottom_navigation_store"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="Store" />
 
     <item
         android:id="@+id/bottom_navigation_fabrica"

@@ -30,7 +30,7 @@ public class MyCarTabFragment extends Fragment {
     public static final String TAG = "MyCarTabFragment";
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public static int int_items = 3;
+    public static int int_items = 2;
 
     public MyCarTabFragment() {
         // Required empty public constructor
@@ -128,8 +128,6 @@ public class MyCarTabFragment extends Fragment {
                     return MyCarInfoFragment.newInstance("","");
                 case 1:
                     return MyCarManualesFragment.newInstance(myCar);
-                case 2:
-                    return MyCarsAccesoriesFragment.newInstance();
             }
             return null;
         }
@@ -151,8 +149,6 @@ public class MyCarTabFragment extends Fragment {
                     return getString(R.string.title_my_car_tab_info);
                 case 1:
                     return getString(R.string.title_my_car_tab_manuals);
-                case 2:
-                    return getString(R.string.title_my_car_tab_accesories);
             }
             return null;
         }

@@ -75,7 +75,7 @@ public class CarDealerTabFragment extends Fragment {
                 case 0:
                     return BuyCarFragment.newInstance();
                 case 1:
-                    return CarDealerNearFragment.newInstance();
+                    return MyCarsAccesoriesFragment.newInstance();
             }
             return null;
         }
@@ -93,7 +93,7 @@ public class CarDealerTabFragment extends Fragment {
                 case 0:
                     return getString(R.string.title_find_concesionaria_buy);
                 case 1:
-                    return getString(R.string.title_find_concesionaria);
+                    return "Accesorios";
             }
             return null;
         }

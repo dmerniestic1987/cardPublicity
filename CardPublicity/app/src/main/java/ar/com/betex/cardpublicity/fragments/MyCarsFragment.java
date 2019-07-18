@@ -81,24 +81,6 @@ public class MyCarsFragment extends Fragment {
         data.add(car);
 
         car = new Car();
-        car.setBrand("BMW");
-        car.setDrawableId(R.drawable.bmw_z3);
-        car.setModel("Z3");
-        car.setPatent("AVC 654 SS");
-        car.setVin("ZZZ767RX666C8X55");
-        car.setYear(2015);
-        data.add(car);
-
-        car = new Car();
-        car.setBrand("Volkswagen");
-        car.setDrawableId(R.drawable.vwbettle);
-        car.setModel("The Beetle");
-        car.setPatent("AVC 654 SS");
-        car.setVin("XAA767RX666C8X55");
-        car.setYear(2019);
-        data.add(car);
-
-        car = new Car();
         car.setBrand("Fiat");
         car.setDrawableId(R.drawable.fait_toro_transparente);
         car.setModel("Toro");

@@ -20,7 +20,6 @@ import android.view.View;
 
 import ar.com.betex.cardpublicity.beans.Car;
 import ar.com.betex.cardpublicity.fragments.BenefictFragment;
-import ar.com.betex.cardpublicity.fragments.BuyCarFilter;
 import ar.com.betex.cardpublicity.fragments.BuyCarFragment;
 import ar.com.betex.cardpublicity.fragments.CarDealerTabFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarTabFragment;
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements MyCarsFragment.On
                     replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
                     fab.show();
                     return true;
-                case R.id.bottom_navigation_concesionarias:
+                case R.id.bottom_navigation_store:
                     replaceFragment(CarDealerTabFragment.newInstance(), CarDealerTabFragment.TAG);
                     fab.hide();
                     return true;
