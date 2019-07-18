@@ -87,7 +87,7 @@ public class MyCarTabFragment extends Fragment {
             mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement OnMyCarAccesoriesListener");
+                    + " must implement OnMerchandisignListener");
         }
     }
 

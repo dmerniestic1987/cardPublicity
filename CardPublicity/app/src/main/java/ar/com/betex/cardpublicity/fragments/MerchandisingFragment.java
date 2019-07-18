@@ -11,27 +11,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import ar.com.betex.cardpublicity.R;
 import ar.com.betex.cardpublicity.adapters.MyCarAccesoryAdapter;
-import ar.com.betex.cardpublicity.beans.Accesory;
+import ar.com.betex.cardpublicity.adapters.MyCarMerchandisingAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link OnMyCarAccesoriesListener} interface
+ * {@link OnMerchandisignListener} interface
  * to handle interaction events.
- * Use the {@link MyCarsAccesoriesFragment#newInstance} factory method to
+ * Use the {@link MerchandisingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyCarsAccesoriesFragment extends Fragment {
-    private OnMyCarAccesoriesListener mListener;
-    private GridView gridViewAccesories;
-    private MyCarAccesoryAdapter adapter;
+public class MerchandisingFragment extends Fragment {
+    private OnMerchandisignListener mListener;
+    private GridView gridViewMerchandising;
+    private MyCarMerchandisingAdapter adapter;
 
-    public MyCarsAccesoriesFragment() {
+    public MerchandisingFragment() {
         // Required empty public constructor
     }
 
@@ -41,8 +38,8 @@ public class MyCarsAccesoriesFragment extends Fragment {
      * @return A new instance of fragment MyCarsAccesoriesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MyCarsAccesoriesFragment newInstance() {
-        MyCarsAccesoriesFragment fragment = new MyCarsAccesoriesFragment();
+    public static MerchandisingFragment newInstance() {
+        MerchandisingFragment fragment = new MerchandisingFragment();
         return fragment;
     }
 
@@ -57,29 +54,29 @@ public class MyCarsAccesoriesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_cars_accesories, container, false);
+        return inflater.inflate(R.layout.fragment_merchandising, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        gridViewAccesories = getActivity().findViewById(R.id.gridViewAccesories);
-        adapter = new MyCarAccesoryAdapter(this.getContext());
-        gridViewAccesories.setAdapter(adapter);
+        gridViewMerchandising = getActivity().findViewById(R.id.gridViewMerchandising);
+        adapter = new MyCarMerchandisingAdapter(this.getContext());
+        gridViewMerchandising.setAdapter(adapter);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onAccesorySelected(uri);
+            mListener.onMerchandisignSeleceted(uri);
         }
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnMyCarAccesoriesListener) {
-            mListener = (OnMyCarAccesoriesListener) context;
+        if (context instanceof OnMerchandisignListener) {
+            mListener = (OnMerchandisignListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnMerchandisignListener");
@@ -102,8 +99,8 @@ public class MyCarsAccesoriesFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnMyCarAccesoriesListener {
+    public interface OnMerchandisignListener {
         // TODO: Update argument type and name
-        void onAccesorySelected(Uri uri);
+        void onMerchandisignSeleceted(Uri uri);
     }
 }

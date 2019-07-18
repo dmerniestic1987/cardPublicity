@@ -18,6 +18,32 @@ public class Accesory {
         this.id = new Long((this.name + this.descripcion).hashCode());
     }
 
+    public static List<Accesory> merchandisingList(){
+        List<Accesory> merchandisingList = new ArrayList<>();
+        Accesory accesiorio = new Accesory("Encendedores auto", "Encendedores para autos FIAT", R.drawable.fiat_merchandising_01);
+        merchandisingList.add(accesiorio);
+
+
+        accesiorio = new Accesory("Tazas", "Tazas", R.drawable.fiat_merchandising_02);
+        merchandisingList.add(accesiorio);
+
+
+        accesiorio = new Accesory("Campera deportiva", "Campera deportiva", R.drawable.fiat_merchandising_03);
+        merchandisingList.add(accesiorio);
+
+        accesiorio = new Accesory("Remera manga corta", "Remera manga corta", R.drawable.fiat_merchandising_04);
+        merchandisingList.add(accesiorio);
+
+        accesiorio = new Accesory("Remera negra", "Remera manga corta negra", R.drawable.fiat_merchandising_05);
+        merchandisingList.add(accesiorio);
+
+        accesiorio = new Accesory("Cargador USB", "Cargador USB Fiat", R.drawable.fiat_merchandising_06);
+        merchandisingList.add(accesiorio);
+
+        return merchandisingList;
+
+    }
+
     public static List<Accesory> accesoriesList(){
         List<Accesory> accesorios = new ArrayList<>();
         Accesory accesiorio = new Accesory("Asiento DeLuxe", "Asiento de cuero importado de Tailandia", R.drawable.asiento);

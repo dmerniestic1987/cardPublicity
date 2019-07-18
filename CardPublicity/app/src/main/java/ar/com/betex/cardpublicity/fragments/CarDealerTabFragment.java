@@ -23,7 +23,7 @@ public class CarDealerTabFragment extends Fragment {
     public static final String TAG = "CarDealerTabFragment";
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public static int int_items = 2;
+    public static int int_items = 3;
 
     public CarDealerTabFragment() {
         // Required empty public constructor
@@ -76,6 +76,8 @@ public class CarDealerTabFragment extends Fragment {
                     return BuyCarFragment.newInstance();
                 case 1:
                     return MyCarsAccesoriesFragment.newInstance();
+                case 2:
+                    return MerchandisingFragment.newInstance();
             }
             return null;
         }
@@ -94,6 +96,8 @@ public class CarDealerTabFragment extends Fragment {
                     return getString(R.string.title_find_concesionaria_buy);
                 case 1:
                     return "Accesorios";
+                case 2:
+                    return "Merchandising";
             }
             return null;
         }

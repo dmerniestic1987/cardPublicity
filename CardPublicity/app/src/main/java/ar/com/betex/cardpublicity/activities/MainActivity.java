@@ -22,12 +22,17 @@ import ar.com.betex.cardpublicity.beans.Car;
 import ar.com.betex.cardpublicity.fragments.BenefictFragment;
 import ar.com.betex.cardpublicity.fragments.BuyCarFragment;
 import ar.com.betex.cardpublicity.fragments.CarDealerTabFragment;
+import ar.com.betex.cardpublicity.fragments.MerchandisingFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarTabFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarsAccesoriesFragment;
 import ar.com.betex.cardpublicity.fragments.MyCarsFragment;
 import ar.com.betex.cardpublicity.R;
 
-public class MainActivity extends AppCompatActivity implements MyCarsFragment.OnMyCarsFragmentInteractionListener, MyCarTabFragment.OnFragmentInteractionListener, MyCarsAccesoriesFragment.OnMyCarAccesoriesListener
+public class MainActivity extends AppCompatActivity
+                          implements MyCarsFragment.OnMyCarsFragmentInteractionListener,
+                                     MyCarTabFragment.OnFragmentInteractionListener,
+                                     MyCarsAccesoriesFragment.OnMyCarAccesoriesListener,
+                                     MerchandisingFragment.OnMerchandisignListener
 {
     private Context context;
     private FloatingActionButton fab;
@@ -132,6 +137,11 @@ public class MainActivity extends AppCompatActivity implements MyCarsFragment.On
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onMerchandisignSeleceted(Uri uri) {
 
     }
 }

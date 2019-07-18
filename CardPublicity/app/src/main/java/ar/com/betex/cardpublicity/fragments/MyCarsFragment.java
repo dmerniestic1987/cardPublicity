@@ -82,17 +82,17 @@ public class MyCarsFragment extends Fragment {
 
         car = new Car();
         car.setBrand("Fiat");
-        car.setDrawableId(R.drawable.fait_toro_transparente);
-        car.setModel("Toro");
-        car.setPatent("AVC 654 SS");
-        car.setVin("XAA767RX666C8X55");
+        car.setDrawableId(R.drawable.fiat_argo);
+        car.setModel("ARGO");
+        car.setPatent("BTC 654 SS");
+        car.setVin("ARC767RA878C8X53");
         car.setYear(2018);
         data.add(car);
 
         car = new Car();
         car.setBrand("Fiat");
-        car.setDrawableId(R.drawable.fiat_uno_blanco);
-        car.setModel("UNO");
+        car.setDrawableId(R.drawable.fiat_punto);
+        car.setModel("PUNTO");
         car.setPatent("BCE 987 BB");
         car.setVin("BAC257RX787C8X55");
         car.setYear(2019);
